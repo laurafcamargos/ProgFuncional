@@ -161,10 +161,6 @@ int max_old(struct Aluno *alunos, int n, FtnComparaAluno cmp) {
 	return m;
 }
 
-int max(struct Aluno *alunos, int n, FtnComparaAluno cmp) {
-	return max_rec(alunos, 0, 0, n, cmp);
-}
-
 int max_rec(struct Aluno *alunos, int m, int i, int n, FtnComparaAluno cmp) {
 	if(!(i < n)) {
 		return m;
@@ -176,7 +172,9 @@ int max_rec(struct Aluno *alunos, int m, int i, int n, FtnComparaAluno cmp) {
 		}
 	}
 }
-
+int max(struct Aluno *alunos, int n, FtnComparaAluno cmp) {
+	return max_rec(alunos, 0, 0, n, cmp);
+}
 void main(int argc, char *argv[]) {
 	struct Aluno alunos[] = {
 		{"Adenilso", 0, 1976, 2, 28, 10.0, 9.8, 9.1},
@@ -187,10 +185,10 @@ void main(int argc, char *argv[]) {
 		{"Fabiana", 0, 1981, 6, 23, 5.0, 8.3, 9.1},
 	};
 
-	//printAlunosTodos(alunos, 6);
-	//printAlunosCurso1(alunos, 6);
-	//printAlunosVelhos(alunos, 6);
-	//
+	printAlunosTodos(alunos, 6);
+	printAlunosCurso1(alunos, 6);
+	printAlunosVelhos(alunos, 6);
+	
 	FtnTestAluno tests[] = {
 		aceitaTodos,
 		aceitaCurso1,

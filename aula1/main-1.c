@@ -160,7 +160,7 @@ void main(int argc, char *argv[]) {
 	}
 
 	bubble(alunos, 4, maiorN1);
-	bubble(alunos, 4, alfabetica);
+	//bubble(alunos, 4, alfabetica);
 
 	int m = max(alunos, 4, maiorN1);
 }
